@@ -13,9 +13,9 @@ namespace DataAccess.Concrete.InMemory
 
         public InMemoryProductDal()
         {
-            _products = new List<Product>()//occur a instance
+            _products = new List<Product>()//occur a instance in Product
             {
-                //Oracle,Sql Server, Postgres, Mongo Db
+                //Oracle,Sql Server, Postgres, MongoDb gibi veritabanlarından geliyormus gibi simüle ettik
                 new Product(){ProductId = 1,CategoryId = 1,ProductName ="Table",UnitPrice = 15,UnitInStock = 15},
                 new Product(){ProductId = 2,CategoryId = 1,ProductName ="Camera",UnitPrice = 500,UnitInStock = 3},
                 new Product(){ProductId = 3,CategoryId = 2,ProductName ="Phone",UnitPrice = 1500,UnitInStock = 2},
@@ -26,7 +26,7 @@ namespace DataAccess.Concrete.InMemory
         }
         public List<Product> GetAll()
         {
-            return _products; //return the database
+            return _products; //return the database 
         }
 
         public void Add(Product product)
@@ -56,7 +56,7 @@ namespace DataAccess.Concrete.InMemory
                       productToDelete = p;
                   }
               }*/
-
+            //SingleOrDefault : tek bir deger döndürür.
             Product productToDelete = _products.SingleOrDefault(p => p.ProductId == product.ProductId); //her p için durum kontrolü yapar !! foreach gibi çalışır
             _products.Remove(productToDelete);
         }

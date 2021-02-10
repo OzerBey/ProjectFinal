@@ -1,7 +1,7 @@
 ﻿using System;
 using Business.Concrete;
 using DataAccess.Concrete.InMemory;
-
+  
 namespace ConsoleUI
 {
     class Program
@@ -12,7 +12,7 @@ namespace ConsoleUI
 
             foreach (var product in productManager.GetAll())
             {
-                Console.WriteLine(product.ProductName);
+                Console.WriteLine(product.ProductId+" : "+product.ProductName);
             }
         }
     }

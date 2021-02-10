@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities.Abstarct
 {
-    //IEntity implement eden bir class bir veritabanı nesnesidir. 
+    //IEntity implement eden class bir veritabani nesnesidir. 
     public interface IEntity   //Database object
     {
     }

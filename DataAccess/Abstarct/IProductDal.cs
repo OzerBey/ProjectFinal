@@ -4,8 +4,8 @@ using System.Text;
 using Entities.Concrete;
 
 namespace DataAccess.Abstarct
-{
-    // !!! interface in operasynları default olarak publictir ama kendisi public degildir..
+{   //IProductDal: Product in Dal ını temsil eder
+    // !!! interface in operasyonlari default olarak public tir ama kendisi public degildir..
     public interface IProductDal
     {
         List<Product> GetAll();
@@ -14,6 +14,6 @@ namespace DataAccess.Abstarct
         void Delete(Product product);
 
         List<Product> GetAllByCategory(int categoryId);
-        
+
     }
 }
