@@ -14,6 +14,11 @@ namespace DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
+        public Category GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Add(Category entity)
         {
             throw new NotImplementedException();

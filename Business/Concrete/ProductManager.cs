@@ -17,6 +17,31 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
+        public void Add(Product product)
+        {
+            if (product.ProductName == "Laptop")
+            {
+
+                Console.WriteLine("Don't add to Database called Laptop !");
+            }
+            _productDal.Add(product);
+        }
+
+        public void Delete(Product product)
+        {
+            _productDal.Delete(product);
+        }
+
+        public void Update(Product product)
+        {
+            _productDal.Update(product);
+        }
+
+        public Product GetById(int id)
+        {
+            return _productDal.GetById(id);
+        }
+
         public List<Product> GetAll()
         {
             //Work codes here
