@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Abstract
 {
@@ -11,9 +12,10 @@ namespace Business.Abstract
         void Delete(Product product);
         void Update(Product product);
         Product GetById(int id);
-        List<Product> GetAll(); 
+        List<Product> GetAll();
         List<Product> GetAllByCategoryId(int id);
         List<Product> GetByUnitPrice(decimal min, decimal max);
+        List<ProductDetailDto> GetProductDetails();
 
     }
 }

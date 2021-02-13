@@ -6,7 +6,8 @@ using Entities.Concrete;
 
 namespace DataAccess.Abstract
 {
-    public interface ICategoryDal : IEntityRepository<Category>
+    //sql cümleciklerinin bulunacagı kisim :)
+    public interface IOrderDal :IEntityRepository<Order>
     {
 
     }
