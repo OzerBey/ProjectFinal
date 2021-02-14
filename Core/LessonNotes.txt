@@ -12,6 +12,11 @@ DTO: Data Transformation Object
 
 Entity ler tablolari simule eder (veritabanı nesnesidir)
 
+----------------------------------------------------------------------------------------
+Core
+	->Utulities
+		->Results Tek sefer yazılıp sürekli kullanılabilcek bir yapı oluşturmus olduk
+
 
 
 

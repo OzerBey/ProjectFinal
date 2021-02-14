@@ -1,0 +1,10 @@
+﻿Constants  (sabitler) Northwinde özel metinler mesajlar kısaca sabitleri buraya koyacagız ki ileride ayri ayri string metin mesajlari
+ile ayrıyeten ugrasmamak için
+	SOLID için ;
+		I: Kullanmayacagın bir şeyi yazma
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+Web API : Angular ,IOS ,Android gibi kýsýmlarla iletisim kurabilmek icin kullaniriz ama
+	console (.NET) tabanli projelerde Web API kullanmasak bile aralaraýnda iletisim kurabiliriz
+	**********************
+		methodlarda sonuc olarak mesaj olarak mesaj (bilgilendirme) geri döndürmek icin 
+			ayný anda birden fazla veri döndürmek ici encalpulation (kapsülleme) kurarýz
+
+!! interface interface yi implemete ederse implemente edilen interface elamanlarý zaten IDataResultta olacagý için tekrar yazýlmazlar
+
+ ***base(x,y) komutu baba classtaki ctor u (x,y) olan methodu çalýstýrýr. Kod hammalýgýndan kurtulurz
+
+

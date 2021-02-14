@@ -11,16 +11,8 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             // CategoryTest();
-
-
-            // productManager.Add(new Product() { ProductId = 1, CategoryId = 2, UnitPrice = 135, ProductName = "ELma", UnitsInStock = 3 });
-            //Console.WriteLine(productManager.GetById(1).QuantityPerUnit);
             // GetAll(productManager);
-            ProductTest();
-
-
-
-
+             ProductTest();
         }
 
         private static void CategoryTest()
@@ -42,14 +34,26 @@ namespace ConsoleUI
         private static void ProductTest()
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
-            foreach (var product in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+
+            if (result.Success)
             {
-                Console.WriteLine(product.ProductName + " => " + product.CategoryName);
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName + " => " + product.CategoryName);
+                }
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+
+            // productManager.Add(new Product() { ProductId = 1, CategoryId = 2, UnitPrice = 135, ProductName = "ELma", UnitsInStock = 3 });
+            // Console.WriteLine(productManager.GetById(1).QuantityPerUnit);
         }
         private static void GetAll(ProductManager productManager)
         {
-            foreach (var product in productManager.GetAll())
+            foreach (var product in productManager.GetAll().Data)
             {
                 Console.WriteLine(product.ProductId + " : " + product.ProductName);
             }
