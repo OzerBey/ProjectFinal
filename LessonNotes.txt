@@ -7,5 +7,45 @@ Web API : Angular ,IOS ,Android gibi kýsýmlarla iletisim kurabilmek icin kullani
 !! interface interface yi implemete ederse implemente edilen interface elamanlarý zaten IDataResultta olacagý için tekrar yazýlmazlar
 
  ***base(x,y) komutu baba classtaki ctor u (x,y) olan methodu çalýstýrýr. Kod hammalýgýndan kurtulurz
+ ----
+ ----------------------------------------13.02.2021 (11.gün Dersi) Notlarý
+ WebAPI ile ilgili çalýþamalara baþlandý.
+	Controllers dizini, bu dizin gelen bütün istekleri (mobilden vs gelen istekler) controller karþýlar
+	//RESTFUL --> HTTP (bir kaynaga ulaþmak için izlenilen yol gibi düþünebiliriz) --> TCP protoklü ise gömülü sistemler ile ilgili iki chazý birbiri ile görüþmesi için kullanýlmaktadýr.
+
+	   **_[HttpGet] ile uygulamamýzý kullanma isteyenleri(clients) nasýl istek bulunacakalrýný Controller altýnda yazýyoruz..
+	   Controllers class isimlendirme kuralý cogul yazýlýr örnegin : ProductsController.cs
+
+	   Note: field larýn default u private dir.
+	   WebAPI
+				->StartUp
+					->
+					        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllers();
+            services.AddSingleton<IProductService,ProductManager>();//bana arka planda bir referans oluþtur eger IProductService þeklinde bir bagýmlýlýk görürsen onu karþýlýgý ProductManager dir demektir
+            services.AddSingleton<IProductDal, EfProductDal>();//eger IProductDal istenirse EfProductDal ý new le arka planda
+        
+		}
+		note: signleton : içinde data tutmuyorsak kullanmalýyýz çnkü singleton hafýzada bi tane referans oluþuturup her client e onu veriyor eger data lý olsaydý herkesin verisi birbirine karýþýrdý 
 
 
+ //Autofac, Ninject, CastleWindsor, StructureMap, LightInject, DryInject-- .NET te yokken IoC Container altyapisi  sunanlar
+AOP: Bir methodun önünde ,sonunda, hata verdiginde çalýþan kod parçacýklarýný AOP mimarisi ile yazýlýr kýsaca business içinde business gibi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

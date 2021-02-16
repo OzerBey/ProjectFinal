@@ -10,7 +10,7 @@ namespace Business.Constants
         //Public olanlar Pascal Case yazılır ...=> ProducAddedMessage gibi
         public static string ProductAdded = "Product has been added.";  
         public static string ProductNameInvalid = "ProductName is invalid";
-        public static string MaintananceTime = "System is maintenance now";
+        public static string MaintananceTime = "System maintenance ";
         public static string ProductListed="Product has been listed";
     }
 }

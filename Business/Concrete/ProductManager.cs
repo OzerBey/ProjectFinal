@@ -55,7 +55,8 @@ namespace Business.Concrete
         {
             //Work codes here
             //if-else etc. as result 
-            if (DateTime.Now.Hour == 22) //saat 22.00 dan 23 e kadar bakımda 
+
+            if (DateTime.Now.Hour == 1) //saat 22.00 dan 23 e kadar bakımda 
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintananceTime);//MaintananceTime :Bakım zamanı
             }

@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LessonNotes.txt = LessonNotes.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{25F0650A-31A7-442B-B583-3D350B22BDDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{14E8086A-1951-42B3-84AD-71CD91535340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E8086A-1951-42B3-84AD-71CD91535340}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E8086A-1951-42B3-84AD-71CD91535340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F0650A-31A7-442B-B583-3D350B22BDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F0650A-31A7-442B-B583-3D350B22BDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F0650A-31A7-442B-B583-3D350B22BDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F0650A-31A7-442B-B583-3D350B22BDDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
