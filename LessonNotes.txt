@@ -33,7 +33,8 @@ Web API : Angular ,IOS ,Android gibi kýsýmlarla iletisim kurabilmek icin kullani
  //Autofac, Ninject, CastleWindsor, StructureMap, LightInject, DryInject-- .NET te yokken IoC Container altyapisi  sunanlar
 AOP: Bir methodun önünde ,sonunda, hata verdiginde çalýþan kod parçacýklarýný AOP mimarisi ile yazýlýr kýsaca business içinde business gibi
 
-
+*****Bir entity manager kendisi hariç baþka bir Dal ý enjekte (enjection) edemezzzz******
+Her entity nin (veritabaný nesnesi) olanin bir kendi nesnesi olacak
 
 
 
