@@ -7,6 +7,9 @@ using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
@@ -31,6 +34,7 @@ namespace Business.Concrete
 
         [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
         {
 
@@ -58,6 +62,8 @@ namespace Business.Concrete
 
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]//içinde geçen tüm GET olanları cache den sil
         public IResult Update(Product product)
         {
             _productDal.Update(product);
@@ -65,6 +71,8 @@ namespace Business.Concrete
 
         }
 
+        [CacheAspect]
+        [PerformanceAspect(5)]//performance aspect bu metodun çalışması 5 sn yi geçerse beni uyar demektir
         public IDataResult<Product> GetById(int productId)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
@@ -98,6 +106,19 @@ namespace Business.Concrete
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
+        }
+
+        [TransactionScopeAspect]
+        public IResult AddTransactionTest(Product product)
+        {
+
+            Add(product);
+            if (product.UnitPrice < 10)
+            {
+                throw new Exception("Error");
+            }
+            Add(product);
+            return null;
         }
 
         private IResult CheckIfProductCountOfCategoryCorrect(int categoryId)

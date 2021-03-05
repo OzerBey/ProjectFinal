@@ -21,7 +21,7 @@ namespace Business.Abstract
         //List<ProductDetailDto> GetProductDetails();
 
         //after IDataResult
-        IResult Add(Product product); //we used a IResult instead of void ...
+        IResult Add(Product product); //we used a IResult instead of void operations ...
         IResult Delete(Product product);
         IResult Update(Product product);
         IDataResult<Product> GetById(int productId);
@@ -29,6 +29,7 @@ namespace Business.Abstract
         IDataResult<List<Product>> GetAllByCategoryId(int id);
         IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max);
         IDataResult<List<ProductDetailDto>> GetProductDetails();
+        IResult AddTransactionTest(Product product);
 
     }
 }
