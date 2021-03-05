@@ -70,12 +70,14 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
 
+
+        [CacheAspect] //key,value
         public IDataResult<List<Product>> GetAll()
         {
             //Work codes here
             //if-else etc. as result 
 
-            if (DateTime.Now.Hour == 1) //saat 22.00 dan 23 e kadar bakımda 
+            if (DateTime.Now.Hour == 23) //saat 23.00 dan 24.00 a kadar bakımda 
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintananceTime);//MaintananceTime :Bakım zamanı
             }
